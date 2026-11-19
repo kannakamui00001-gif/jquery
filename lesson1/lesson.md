@@ -123,7 +123,7 @@ jQuery ສາມາດ ດາວໂຫຼດໄດ້ຈາກ https://jquery.co
 </body>
 </html>
 ```
-## ຕົວຢ່າງ 3
+### **ຕົວຢ່າງ 3**
 
     3 ເຮົາມີຂໍ້ມູນດັ່ງນີ້ :
 
@@ -135,7 +135,7 @@ jQuery ສາມາດ ດາວໂຫຼດໄດ້ຈາກ https://jquery.co
                 
     - ຈົ່ງຂຽນ jquery ເມື່ອກົດປຸ່ມ hid ແລ້ວໃຫ້ຂໍ້ມູນຢູ່ tag p ຫາຍໄປ ?
 
-### ຄຳສັ່ງທີ່ໃຊ້ 
+### **ຄຳສັ່ງທີ່ໃຊ້ **
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -164,7 +164,7 @@ jQuery ສາມາດ ດາວໂຫຼດໄດ້ຈາກ https://jquery.co
 </html>
 ```
 
-## ຕົວຢ່າງ 4
+## **ຕົວຢ່າງ** 4
 
 4 ເຮົາມີຂໍ້ມູນດັງນີ້ : 
 
@@ -174,3 +174,82 @@ jQuery ສາມາດ ດາວໂຫຼດໄດ້ຈາກ https://jquery.co
     <button class = 'blue'> ສິຟ້າ </button>
 
 - ຈົ່ງຂຽນ jquery ເພື່ອເຊື່ອງຂໍ້ມູນໃນ h3 ແລ້ວເມື່ອຄຮີກຄຳເວົ້າວ່າ ເຈົ້າເລືອກສິແດງ ໃຫ້ຂື້ນວ່າ ຂໍ້ຄວາມວ່າ ເຈົ້າເລືອກສິແດງ ຖ້າຄິກໃສ່ ປຸ່ມເຈົ້າເລືອກສີຟ້າ ໃຫ້ສະແດງຄຳວ່າ ເຈົ້າເລືອກສີຟ້າ
+
+### **ຄຳສັ່ງທີ່ໃຊ້**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./java/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('h3').hide();
+            $('.red').click(function () { 
+                $('.a').show();
+                $('.b').hide();
+                
+            });
+            $('.blue').click(function () { 
+                $('.b').show();
+                $('.a').hide();            
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3 class="a">ເຈົ້າເລືອກ ສິແດງ</h3>
+    <h3 class="b">ເຈົ້າເລືອກ ສິຟ້າ</h3>
+    <button class="red">ສິແດງ</button>
+    <button class="blue">ສິຟ້າ</button>
+</body>
+</html>
+```
+
+## **ຕົວຢາງ 5**
+ເຮົາມີຂໍ້ມູນດັ້ງນີ້ 
+
+    <h1>ມື້ນີ້ຜົນຕົກຂ້ອຍຈະນອນ</h1>
+    <button type="button" class="btn btn_red">ສີແດງ</button>
+    <button type="button" class="btn btn_blue">ສີຟ້າ</button>
+    <button type="button" class="btn btn_yellow">ສີເຫຼືອງ</button>
+
+- ຈົ່ງຂຽນ jquery ດັ່ງນີ້ 
+- ຖ້າຫາກວ່າຄຮີກໃຊ່ປຸ່ມ ສີແດງ ແລ້ວໃຫ້ສະແດງຄຳວ່າ ມື່ນີ້ຝົກຕົກຂ້ອຍຈະນອນ ໃຫ້ເປັນສິແດງ
+- ຖ້າຫາກວ່າຄຮີກໃຊ່ປຸ່ມ ສີຟ້າ ແລ້ວໃຫ້ສະແດງຄຳວ່າ ມື່ນີ້ຝົກຕົກຂ້ອຍຈະນອນ ໃຫ້ເປັນສິຟ້າ
+- ຖ້າຫາກວ່າຄຮີກໃຊ່ປຸ່ມ ສີເຫຼືອງ ແລ້ວໃຫ້ສະແດງຄຳວ່າ ມື່ນີ້ຝົກຕົກຂ້ອຍຈະນອນ ໃຫ້ເປັນສີເຫຼືອງ
+
+### **ຄຳສັ່ງທີ່ໃຊ້**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./java/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.btn_red').click(function () { 
+                $('h1').css("color" , "red");
+            });
+            $('.btn_blue').click(function () { 
+                $('h1').css("color" , "blue");
+            });
+            $('.btn_yellow').click(function () { 
+                $('h1').css("color" , "yellow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>ມື່ນີ້ຝົນຕົກຂ້ອຍຈະນອນ</h1>
+    <button type="button" class="btn btn_red">ສິແດງ</button>
+    <button type="button" class="btn btn_blue">ສິຟ້າ</button>
+    <button type="button" class="btn btn_yellow">ສິເຫຼືອງ</button>
+</body>
+</html>
+```
