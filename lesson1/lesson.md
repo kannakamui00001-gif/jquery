@@ -33,6 +33,14 @@ jQuery ສາມາດ ດາວໂຫຼດໄດ້ຈາກ https://jquery.co
 
 ##### **ຮູບແບບທີ່ 1** 
 
+```java
+<script>
+    $(document).ready(function)(){
+        // ຂຽນ script ລະຫວ່າງນີ້......
+    });
+</script>
+```
+
 # **4 ຈົ່ງຂຽນ jquery ເພື່ອສະແດງຄຳເວົ້າ hello word !!!! ?**
 
 ### **ຄຳສັ່ງທີໃຊ້**
