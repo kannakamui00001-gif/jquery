@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <script src="./java/jquery.js"></script>
-    <script src="./java.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button.dbl').dblclick(function () { 
+                $('h4.dbl').toggle();
+                
+            });
+        });
+    </script>
 </head>
-<body>
-    <center>
-        <button>ກັບມາ</button>
-    </center>
-    <p style="text-align: center;">i like femboy</p>
+<body class=" container justify-content-center d-flex align-items-start py-5">
+    <div class="card">
+        <div class="card-header text-center">
+            <h1>ການໃຊ້ event dblclick</h1>
+        </div>
+        <div class="card-body">
+            <h4 class="dbl">ກົດດັບເບີ່ນຄິກທີ່ປຸ່ມເພື່ອໃຫ້ຂໍ້ຄວາມຫາຍໄປແລະກັບມາ</h4>
+        </div>
+        <div class="card-footer text-center">
+            <button class="dbl btn btn-info btn-lg">ກົດນີ້</button>
+        </div>
+    </div>
 </body>
 </html>
