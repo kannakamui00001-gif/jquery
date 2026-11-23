@@ -161,3 +161,67 @@ $(function(){
 </body>
 </html>
 ```
+
+### ຄຳສັ່ງທີ່ ອາຈານໃຊ້ 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: phetsarath ot;
+        }
+    </style>
+    <script src="java/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.b1').hide();
+            $('.btn1').click(function (e) { 
+                e.preventDefault();
+                if($(".b1").is(':hidden')){
+                    $('.a1').fadeOut();
+                    $('.b1').fadeIn();
+                }else{
+                    $('.b1').fadeOut();
+                }
+                
+            });
+            $('.btn2').dblclick(function (e) { 
+                e.preventDefault();
+                $('.a1 , .b1').fadeIn();
+            });
+            $('.btn1').hover(function () {
+                    // over
+                    $(this).css({"background-color":"green" , "font-size" : '24px'});
+                    $('.btn2').fadeTo("slow",0);
+                }, function () {
+                    // out
+                    $(this).css({"background-color":"" , "font-size" : ''});
+                    $('.btn2').fadeTo("slow",1);
+                }
+            );
+            $('.btn2').hover(function () {
+                    // over
+                    $(this).css({'background-color' : 'blue' , "font-size" : "24px"});
+                    $('.btn1').fadeTo("slow", 0);
+                }, function () {
+                    // out
+                    $(this).css({'background-color' : '' , "font-size" : ""});
+                    $('.btn1').fadeTo("slow", 1);
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+    <h3 class="a1">ຄ່ອຍໆຫາຍໄປ</h3>
+    <h3 class="b1">ຄ່ອຍໆສະແດງອອກມາ</h3>
+    <button type="button" class="btn1">ຄິກຄັ້ງດຽວ</button>
+    <button type="button" class="btn2">ຄິກສອງຄັ້ງ</button>
+</body>
+</html>
+```
