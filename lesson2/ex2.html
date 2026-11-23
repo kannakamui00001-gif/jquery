@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#slideup').click(function (e) { 
+                e.preventDefault();
+                $('img').slideUp();
+            });
+            $('#slidedown').click(function (e) { 
+                e.preventDefault();
+                $('img').slideDown();
+            });
+            $('#slidetoggle').click(function (e) { 
+                e.preventDefault();
+                $('img').slideToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="img/1.png" alt="" width="300px" height="">
+    <button type="button" id="slideup">ເລື່ອນຂື້ນ</button>
+    <button type="button" id="slidedown">ເລື່ອນລົງ</button>
+    <button type="button" id="slidetoggle">ເລື່ອນຂື້ນແລະເລື່ອນລົງ</button>
+</body>
+</html>
