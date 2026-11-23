@@ -238,3 +238,43 @@ $(function(){
   + ຖ້າຫາກວ່າ ກົດປຸ່ມເລື່ອນຂື້ນໃຫ້ຮູບພາບນັ້ນເລື່ອນຂື້ນ
   + ຖ້າຫາກວ່າ ກົດປຸ່ມເລື່ອນລົງໃຫ້ຮູບພາບນັ້ນເລື່ອນລົງ 
   + ຖ້າຫາກວ່າ ກົດປຸ່ມ ເລື່ອນຂື້ນ ແລະ ເລື່ອນລົງໃຫ້ຮູບພາບນັ້ນ ເລືອນຂືນ ແລະ ເມື່ອກົດອີກຄັ້ງໃຫ້ຮູບພາບນັ້ນ ເລື່ອນລົງ 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <script src="java/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#slideup').click(function (e) {
+                e.preventDefault();
+                $('img').slideUp();
+            });
+            $('#slidedown').click(function (e) {
+                e.preventDefault();
+                $('img').slideDown();
+            });
+            $('#slidetoggle').click(function (e) {
+                e.preventDefault();
+                $('img').slideToggle();
+            });
+        });
+    </script>
+</head>
+
+<body class=" px-5 py-5 d-flex flex-column align-items-center ">
+    <h1><img src="img/1.png" alt="" width="300px" height=""></h1>
+    <div class=" mt-3">
+        <button type="button" id="slideup">ເລື່ອນຂື້ນ</button>
+        <button type="button" id="slidedown">ເລື່ອນລົງ</button>
+        <button type="button" id="slidetoggle">ເລື່ອນຂື້ນແລະເລື່ອນລົງ</button>
+    </div>
+</body>
+
+</html>
+```
