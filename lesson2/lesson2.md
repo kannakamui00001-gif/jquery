@@ -93,7 +93,7 @@ $(function(){
 </html>
 ```
 
-## ບົບເຜີກຫັດ 
+## **ບົບເຜີກຫັດ** 
 
 1 ເຮົມມີຂໍ້ມູນດັ່ງນີ້ : 
 
@@ -106,3 +106,58 @@ $(function(){
   + ເມື່ອເກົດໃສ່ປຸ່ມ ຄິກຄັ້ງດຽວ ໃຫ້ຄຳວ່າ "ຄິກຄັ້ງດຽວ" ນັ້ນຄ່ອຍໆຫາຍໄປ ແລະ ຄຳາວ່າ :​ ຄ່ອຍໆສະແດງອອກມາ ນັ້ນສະແດງຂຶ້ນມາ ແລະ ເມື່ອມີການກົດໃສ່ປຸ່ມ ຄິກຄັ້ງດຽວ ອີກເທື່ອນຶ່ງ ແລ້ວໃຫ້ຄຳວ່າ ຄ່ອຍໆສະແດງອອກມາ ນັ້ນຫາຍໄປ 
   + ເມື່ອເຮົາກົດດັບເບີ້ນຄິກໃສ່ຄຳວ່າ :​ ຄິກສອງຄັ້ງ ໃຫ້ຄຳເວົ້າທັງ 2 ແທັກນັ້ນກັບມາສະແດງທັງໝົດ
   + ເມື່ອເອົາເມົ້າໄປຊື່ໃສ່ປຸ່ມຄິກຄັ້ງດຽວ ແລ້ວໃຫ້ປຸ່ມ ຄິກຄັ້ງດຽວ ໃຫ້ມີສີພື້ນຫຼັງເປັນສິຂຽວ , ມີຂະໜາດໄຫຍ່ຂື້ນ , ປຸ່ມ ຄິກສອງຄັ້ງ ນັ້ນຄ່ອຍໆຫາຍໄປ ,​ ເມືອເອົາເມົ້າອອກແລ້ວ ໃຫ້ປຸ່ມ ຄິກຄັ້ງດຽວ ເປັນສິປົກກະຕິ ແລະ ມີຂະໜາດປົກກະຕິ , ປຸ່ມຄິກສອງຄັ້ງຄ່ອຍໆກັບມາສະແດງ ແລະ ເມື່ອເອົາເມົ້າໄປຊີ້ໃສປຸ່ມ ຄິກສອງຄັ້ງ ແລ້ວໃຫ້ປຸ່ມ ຄິກສອງຄັ້ງ ມີສິພື້ນຫຼັງເປັນສິຟ້າ , ມີຂະໜາດໄຫຍ່ຂື້ນ , ປຸ່ມຄິກຄັ້ງດຽວ ຄ່ອຍໆຫາຍໄປ , ເມື່ອເອົາເມົ້າອອກມຫ້ກັບມາເປັນປົກກະຕິ.
+### **ຄຳສັ່ງທີ່ໃຊ້**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.b1').hide();
+            $('.btn1').click(function (e) { 
+                e.preventDefault();
+                $('.a1').fadeOut();
+                $('.b1').fadeIn();
+                // $('.b1').fadeToggle();
+                $('.btn1').click(function (e) { 
+                    e.preventDefault();
+                    $('.b1').hide();
+                });
+            });
+            $('.btn2').dblclick(function (e) { 
+                e.preventDefault();
+                $('.a1').fadeIn();
+                $('.b1').fadeIn();
+            });
+            $('.btn1').mouseenter(function () { 
+                $('.btn1').css({"background-color" : "green" , "padding" : "15px"});
+                $('.btn2').fadeTo(400 , 0);
+            });
+            $('.btn1').mouseleave(function () { 
+                $('.btn1').css({"background-color" : "" , "padding" : ""});
+                $('.btn2').fadeTo(400 , 1);
+            });
+            $('.btn2').mouseenter(function () { 
+                $('.btn2').css({"background-color" : "blue" , "padding" : "15px"});
+                $('.btn1').fadeTo(400 , 0);
+            });
+            $('.btn2').mouseleave(function () { 
+                $('.btn2').css({"background-color" : "" , "padding" : ""});
+                $('.btn1').fadeTo(400 , 1);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3 class="a1">ຄ່ອຍໆຫາຍໄປ</h3>
+    <h3 class="b1">ຄ່ອຍໆສະແດງອອກມາ</h3>
+    <button type="button" class="btn1">ຄິກຄັ້ງດຽວ</button>
+    <button type="button" class="btn2">ຄິກສອງຄັ້ງ</button>
+</body>
+</html>
+```
