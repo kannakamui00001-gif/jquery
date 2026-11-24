@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.a').keydown(function (e) { 
+                $(this).css({'background-color' : 'gray' , 'font-size' : '30px'});
+            });
+            $('.a').keyup(function (e) { 
+                $(this).css({'background-color' : 'pink' , 'font-size' : '12px'});
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text" name="text" class="a" id="">
+</body>
+</html>

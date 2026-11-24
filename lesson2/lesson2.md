@@ -359,3 +359,40 @@ $(function(){
 </body>
 </html>
 ```
+
+## ບົດເຝີກຫັດ 5 
+
+### 5 ເຮົາມີຂໍ້ມູນດັ່ງນີ້ :​
+
+    ປ້ອນຂໍ້ມູນ <input class = 'a' type = "text" name = "text" >
+
++ ຈົ່ງຂຽນ jquery ດັ່ງນີ້ : 
+  + ເມື່ອກົດປຸ່ມ keybroad ໃຫ້ຂະໜາດຕົວໜັງສື ເປັນ 30px ບ໊ອກເປັນສີເທົາ 
+  + ເມື່ອເຮົາວາງ ປຸ່ມຄີບອດ ໃຫ້ຂະໜາດຕົວອັກສອນເປັນ 12px ແລະ ບ໊ອກເປັນສີບົວ
+
+### ຄຳສັ່ງທີໃຊ້ 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.a').keydown(function (e) { 
+                $(this).css({'background-color' : 'gray' , 'font-size' : '30px'});
+            });
+            $('.a').keyup(function (e) { 
+                $(this).css({'background-color' : 'pink' , 'font-size' : '12px'});
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text" name="text" class="a" id="">
+</body>
+</html>
+```
