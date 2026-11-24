@@ -279,9 +279,9 @@ $(function(){
 </html>
 ```
 
-## ບົບເຝິກຫັດ 3 
+## **ບົບເຝິກຫັດ 3**
 
-### 3 ເຮົາມີຂໍ້ມູນດັ່ງນີ້ :​
+### **3 ເຮົາມີຂໍ້ມູນດັ່ງນີ້ :​**
 
     <p> ການນຳໃຊ້ fadeIn ແລະ fadeOut </p>
     <button class = "btn1">fadeIn</button>
@@ -290,3 +290,34 @@ $(function(){
 + ຈົ່ງຂຽນ jquery ດັ້່ງນີ້ :  
   + ເມື່ອເຮົາຄິກໃສ່ປຸ່ມ fadeOut ໃຫ້ຂໍ້ຄວາມຄ່ອຍໆຫາຍໄປ
   + ເມື່ອເຮົາຄິກໃສ່ປຸ່ມ fadeIn ໃຫ້ຂໍ້ຄວາມຄ່ອຍໆກັບມາສະແດງ
+
+### **ຄຳສັ່ງທີ່ໃຊ້**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.btn1').click(function (e) { 
+                e.preventDefault();
+                $('p').fadeIn();
+            });
+            $('.btn2').click(function (e) { 
+                e.preventDefault();
+                $('p').fadeOut();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p> ການນຳໃຊ້ fadeIn ແລະ fadeOut </p>
+    <button class = "btn1">fadeIn</button>
+    <button class = "btn2">fadeOut</button>
+</body>
+</html>
+```
