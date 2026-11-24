@@ -230,10 +230,10 @@ $(function(){
 
 + ເຮົາມີຂໍ້ມູນດັ່ງນີ້ : 
   
-  <img src = "ຊື່.ນາມສະກຸນ" width = "300" heigth = "300"></img>
-  <button type = "button" id = "slideup">ເລື່ອນຂື້ນ</button>
-  <button type = "button" id = "slidedown">ເລື່ອນລົງ</button>
-  <button type = "button" id = "slidetoggle">ເລື່ອນຂື້ນ ແລະ ເລື່ອນລົງ</button>
+        <img src = "ຊື່.ນາມສະກຸນ" width = "300" heigth = "300"></img>
+        <button type = "button" id = "slideup">ເລື່ອນຂື້ນ</button>
+        <button type = "button" id = "slidedown">ເລື່ອນລົງ</button>
+        <button type = "button" id = "slidetoggle">ເລື່ອນຂື້ນ ແລະ ເລື່ອນລົງ</button>
 
   + ຖ້າຫາກວ່າ ກົດປຸ່ມເລື່ອນຂື້ນໃຫ້ຮູບພາບນັ້ນເລື່ອນຂື້ນ
   + ຖ້າຫາກວ່າ ກົດປຸ່ມເລື່ອນລົງໃຫ້ຮູບພາບນັ້ນເລື່ອນລົງ 
