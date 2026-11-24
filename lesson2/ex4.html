@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('h1').hover(function () {
+                    // over
+                    $('h1').css({'background-color' : 'red' , 'font-size' : '40px'});
+                }, function () {
+                    // out
+                    $('h1').css({'background-color' : 'yellow' , 'font-size' : '20px'});
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+    <h1>ການນຳໃຊ້ mouse events</h1>
+</body>
+</html>
