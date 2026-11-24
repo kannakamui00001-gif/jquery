@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.btn1').click(function (e) { 
+                e.preventDefault();
+                $('p').fadeIn();
+            });
+            $('.btn2').click(function (e) { 
+                e.preventDefault();
+                $('p').fadeOut();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p> ການນຳໃຊ້ fadeIn ແລະ fadeOut </p>
+    <button class = "btn1">fadeIn</button>
+    <button class = "btn2">fadeOut</button>
+</body>
+</html>

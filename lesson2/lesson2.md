@@ -278,3 +278,15 @@ $(function(){
 
 </html>
 ```
+
+## ບົບເຝິກຫັດ 3 
+
+### 3 ເຮົາມີຂໍ້ມູນດັ່ງນີ້ :​
+
+    <p> ການນຳໃຊ້ fadeIn ແລະ fadeOut </p>
+    <button class = "btn1">fadeIn</button>
+    <button class = "btn2">fadeOut</button>
+
++ ຈົ່ງຂຽນ jquery ດັ້່ງນີ້ :  
+  + ເມື່ອເຮົາຄິກໃສ່ປຸ່ມ fadeOut ໃຫ້ຂໍ້ຄວາມຄ່ອຍໆຫາຍໄປ
+  + ເມື່ອເຮົາຄິກໃສ່ປຸ່ມ fadeIn ໃຫ້ຂໍ້ຄວາມຄ່ອຍໆກັບມາສະແດງ
