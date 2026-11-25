@@ -11,15 +11,16 @@
             font-family: phetsarath ot;
         }
     </style>
+    
     <script src="./java/jquery.js"></script>
-    <script src="">
+    <script>
         $(document).ready(function () {
             $('#send').click(function (e) { 
                 e.preventDefault();
                 var a = $("#fname").val();
                 var b = $("#lname").val();
                 var c = $("input[id='gender']:checked").val();
-                $.post("get.php",{
+                $.get("get.php",{
                     fname:a,
                     lname:b,
                     gender:c
@@ -45,18 +46,18 @@
                         <form action="./get.php" class=" vertical" method="get">
                             <div class=" mt-3">
                                 <label for="">ຊື່ : </label>
-                                <input type="text" name="fname" placeholder="ປ້ອນຊື່" id="" class=" form-control">
+                                <input type="text"  id = "fname" name="fname" placeholder="ປ້ອນຊື່" id="" class=" form-control">
 
                             </div>
                             <div class=" mt-3">
                                 <label for="">ນາມສະກຸນ : </label>
-                                <input type="text" name="lname" placeholder="ປ້ອນນາມສະກຸນ" id="" class=" form-control">
+                                <input type="text"  id = "lname" name="lname" placeholder="ປ້ອນນາມສະກຸນ" id="" class=" form-control">
                             </div>
                             <div class=" mt-3">
                                 <label for="">ເລືອກເພດ</label>
                                 <div class=" radio-inline">
-                                    <input type="radio" name="gender" value="ເພດຍິງ">ເພດຍິງ
-                                    <input type="radio" name="gender" value="ເພດຊາຍ">ເພດຊາຍ
+                                    <input type="radio"  id = "gender" name="gender" value="ເພດຍິງ">ເພດຍິງ
+                                    <input type="radio"  id = "gender" name="gender" value="ເພດຊາຍ">ເພດຊາຍ
                                 </div>
                             </div>
                             <div class="mt-3">
