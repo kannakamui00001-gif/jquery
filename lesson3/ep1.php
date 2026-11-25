@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <style>
+        *{
+            font-family: phetsarath ot;
+        }
+    </style>
+    <script src="./java/jquery.js"></script>
+    <script src="">
+        $(document).ready(function () {
+            $('#send').click(function (e) { 
+                e.preventDefault();
+                var a = $("#fname").val();
+                var b = $("#lname").val();
+                var c = $("input[id='gender']:checked").val();
+                $.post("get.php",{
+                    fname:a,
+                    lname:b,
+                    gender:c
+                },
+                function(output){
+                    $("#show").html(output);
+                }
+            );
+            });
+        });
+    </script>
 </head>
 
 <body>
