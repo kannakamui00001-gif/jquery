@@ -9,6 +9,7 @@
     <style>
         *{
             font-family: phetsarath ot;
+            justify-content: center;
         }
     </style>
     
@@ -29,6 +30,13 @@
                     $("#show").html(output);
                 }
             );
+            });
+            $('#reset').click(function (e) { 
+                e.preventDefault();
+                var a = $("#fname").val();
+                var b = $("#lname").val();
+                var c = $("input[id='gender']:checked").val();
+                $('#show').html("");
             });
         });
     </script>
