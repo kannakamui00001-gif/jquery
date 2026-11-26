@@ -323,7 +323,7 @@ $(function(){
 ```
 <br>
 
-+ file ຊື່ : getex.php
++ file ຊື່ : getex1.php
 ```php
 <?php
 $roomnumber = $_GET['roomnumber'];

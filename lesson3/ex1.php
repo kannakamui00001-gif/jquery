@@ -34,7 +34,7 @@
                 else if(!d){
                     alert('ຫ້ອງບໍ່ວ່າງ');
                 }else{
-                $.get("getex.php", {
+                $.get("getex1.php", {
                         roomnumber: a,
                         type: b,
                         price: c,
