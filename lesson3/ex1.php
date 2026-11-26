@@ -21,18 +21,18 @@
                 var a = $("#roomnumber").val();
                 var b = $("#type").val();
                 var c = $("#price").val();
-                var d = $("input[id='status']:checked").val();
-                if(a == ""){
-                    alert('ກະລຸນາປ້ອນເລກຫ້ອງ')
+                var d = $("input[name='status']:checked").val();
+                if(!a ){
+                    alert('ກະລຸນາປ້ອນເລກຫ້ອງ');
                 }
-                else if(b == ""){
-                    alert('ກະລຸນາເລືອກປະເພດຫ້ອງ')
+                else if(!b ){
+                    alert('ກະລຸນາເລືອກປະເພດຫ້ອງ');
                 }
-                else if(c == ""){
-                    alert('ກະລຸນາເລືອກລາຄາຫ້ອງ')
+                else if(!c ){
+                    alert('ກະລຸນາເລືອກລາຄາຫ້ອງ');
                 }
-                else if(d == ""){
-                    alert('ຫ້ອງບໍ່ວ່າງ')
+                else if(!d){
+                    alert('ຫ້ອງບໍ່ວ່າງ');
                 }else{
                 $.get("getex.php", {
                         roomnumber: a,
@@ -51,7 +51,7 @@
                 var a = $("#roomnumber").val();
                 var b = $("#type").val();
                 var c = $("#price").val();
-                var d = $("input[id='status']:checked").val();
+                var d = $("input[name='status']:checked").val();
                 $('#show').html("");
             });
         });
@@ -76,7 +76,7 @@
                             </div>
                             <div class=" mt-3">
                                 <label for="">ປະເພດຫ້ອງ</label>
-                                <select name="type" id="type">
+                                <select name="type" id="type" class=" form-select">
                                     <option value="">ກະລຸນາເລືອກປະເພດຫ້ອງ</option>
                                     <option value="good">good</option>
                                     <option value="bad">bad</option>
@@ -84,7 +84,7 @@
                             </div>
                             <div class=" mt-3">
                                 <label for="">ລາຄາຫ້ອງ</label>
-                                <select name="price" id="price">
+                                <select name="price" id="price" class=" form-select">
                                     <option value="">ກະລຸນາເລືອກລາຄາຫ້ອງ</option>
                                     <option value="1000000">1000000</option>
                                     <option value="500000">500000</option>
@@ -93,8 +93,8 @@
                             <div class=" mt-3">
                                 <label for="">ສະຖານະຫ້ອງ</label>
                                 <div>
-                                    <input type="radio" name="status" id="status" value="ວ່າງ">ວ່າງ
-                                    <input type="radio" name="status" id="status" value="ບໍ່ວ່າງ">ບໍ່ວ່າງ
+                                    <input type="radio" name="status" value="ວ່າງ">ວ່າງ
+                                    <input type="radio" name="status" value="ບໍ່ວ່າງ">ບໍ່ວ່າງ
                                 </div>
                             </div>
                         </form>
