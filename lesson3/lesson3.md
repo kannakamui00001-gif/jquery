@@ -264,10 +264,9 @@ $(function(){
 <body>
     <div class=" container-fluid py-5">
         <div class=" row">
-            <div class=" col-md-4"></div>
             <div class=" col-md-4">
                 <div class=" card">
-                    <div class=" card-header text-center text-white bg-success-subtle">
+                    <div class=" card-header text-center text-white bg-primary">
                         <h2 class=" text-center" align="center">ຟອມປ້ອນຂໍ້ມູນ</h2>
                     </div>
                     <div class=" card-body">
@@ -294,11 +293,9 @@ $(function(){
                                 </select>
                             </div>
                             <div class=" mt-3">
-                                <label for="">ສະຖານະຫ້ອງ</label>
-                                <div>
-                                    <input type="radio" name="status" value="ວ່າງ">ວ່າງ
-                                    <input type="radio" name="status" value="ບໍ່ວ່າງ">ບໍ່ວ່າງ
-                                </div>
+                                <label for="">ສະຖານະຫ້ອງ : </label>
+                                    <input type="radio" name="status" value="ວ່າງ"> ວ່າງ
+                                    <input type="radio" name="status" value="ບໍ່ວ່າງ"> ບໍ່ວ່າງ
                             </div>
                         </form>
                     </div>
@@ -309,7 +306,14 @@ $(function(){
                 </div>
             </div>
             <div class=" col-md-4">
-                <div id="show"></div>
+                <div class=" card">
+                    <div class=" card-header text-center bg-info text-white">
+                       <h2>ຜົນທີ່ໄດ້</h2>
+                    </div>
+                    <div class=" card-body">
+                        <div id="show"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -321,14 +325,44 @@ $(function(){
 
 + file ຊື່ : getex.php
 ```php
-<?php 
-    $roomnumber=$_GET['roomnumber'] ;
-    $type=$_GET['type'] ;
-    $price=$_GET['price'] ;
-    $status=$_GET['status'] ;
-    echo "ເລກຫ້ອງ : $roomnumber<br>";
-    echo "ປະເພດຫ້ອງ : $type.<br>";
-    echo "ລາຄາຫ້ອງ : $price<br>";
-    echo "ສະຖານະຫ້ອງ : $status<br>";
+<?php
+$roomnumber = $_GET['roomnumber'];
+$type = $_GET['type'];
+$price = $_GET['price'];
+$status = $_GET['status'];
+
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <form>
+        <div class=" mt-3">
+            <label for="">ເບີຫ້ອງ : </label>
+            <input type="text" name="" id="" value="<?php echo $roomnumber; ?>" class=" form-control" readonly>
+
+        </div>
+        <div class=" mt-3">
+            <label for="">ປະເພດຫ້ອງ</label>
+            <input type="text" name="" id="" value="<?php echo $type; ?>" class=" form-control" readonly>
+        </div>
+        <div class=" mt-3">
+            <label for="">ລາຄາຫ້ອງ</label>
+            <input type="text" name="" id="" value="<?php echo $price; ?>" class=" form-control" readonly>
+        </div>
+        <div class=" mt-3 mb-3">
+            <label for="">ສະຖານະຫ້ອງ : </label>
+            <input type="text" name="" id="" value="<?php echo $status; ?>" class=" form-control" readonly>
+        </div>
+    </form>
+</body>
+
+</html>
 ```
