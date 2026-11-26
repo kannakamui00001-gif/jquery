@@ -3,10 +3,6 @@ $roomnumber = $_GET['roomnumber'];
 $type = $_GET['type'];
 $price = $_GET['price'];
 $status = $_GET['status'];
-echo "ເລກຫ້ອງ : $roomnumber<br>";
-echo "ປະເພດຫ້ອງ : $type.<br>";
-echo "ລາຄາຫ້ອງ : $price<br>";
-echo "ສະຖານະຫ້ອງ : $status<br>";
 
 ?>
 <!DOCTYPE html>
@@ -20,29 +16,23 @@ echo "ສະຖານະຫ້ອງ : $status<br>";
 </head>
 
 <body>
-    <form action="./get.php" class=" vertical" method="get">
+    <form>
         <div class=" mt-3">
             <label for="">ເບີຫ້ອງ : </label>
-            <input type="text" id="roomnumber" name="roomnumber" placeholder="ປ້ອນເລກຫ້ອງ" class=" form-control">
+            <input type="text" name="" id="" value="<?php echo $roomnumber; ?>" class=" form-control" readonly>
 
         </div>
         <div class=" mt-3">
             <label for="">ປະເພດຫ້ອງ</label>
-            <select name="type" id="type" class=" form-select">
-                <option value="">ກະລຸນາເລືອກປະເພດຫ້ອງ</option>
-                <option value="good">good</option>
-                <option value="bad">bad</option>
-            </select>
+            <input type="text" name="" id="" value="<?php echo $type; ?>" class=" form-control" readonly>
         </div>
         <div class=" mt-3">
             <label for="">ລາຄາຫ້ອງ</label>
-            <select name="price" id="price" class=" form-select">
-                <option value="<?php echo $status; ?>"><?php echo $status; ?></option>
-            </select>
+            <input type="text" name="" id="" value="<?php echo $price; ?>" class=" form-control" readonly>
         </div>
-        <div class=" mt-3">
+        <div class=" mt-3 mb-3">
             <label for="">ສະຖານະຫ້ອງ : </label>
-            <input type="text" name="" id="" value="<?php echo $status; ?>">
+            <input type="text" name="" id="" value="<?php echo $status; ?>" class=" form-control" readonly>
         </div>
     </form>
 </body>

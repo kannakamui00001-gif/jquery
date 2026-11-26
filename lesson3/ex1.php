@@ -61,8 +61,7 @@
 <body>
     <div class=" container-fluid py-5">
         <div class=" row">
-            <div class=" col-md-3"></div>
-            <div class=" col-md-3">
+            <div class=" col-md-4">
                 <div class=" card">
                     <div class=" card-header text-center text-white bg-primary">
                         <h2 class=" text-center" align="center">ຟອມປ້ອນຂໍ້ມູນ</h2>
@@ -103,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" col-md-3">
+            <div class=" col-md-4">
                 <div class=" card">
                     <div class=" card-header text-center bg-info text-white">
                        <h2>ຜົນທີ່ໄດ້</h2>
@@ -112,9 +111,7 @@
                         <div id="show"></div>
                     </div>
                 </div>
-                
             </div>
-            <div class=" col-md-3"></div>
         </div>
     </div>
 </body>
