@@ -23,12 +23,12 @@
                 var type = $("#type").val();
                 var price = $("#price").val();
                 var status = $("input[name='status']:checked").val();
-                if (on == "") {
+                if (!on) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'ແຈ້ງເຕືອນ',
                         text: 'ກະລຸນາປ້ອນເບີຫ້ອງ'
-                    })
+                    });
                 }
                 else if(!type){
                     Swal.fire({
@@ -50,6 +50,17 @@
                         title: 'ແຈ້ງເຕືອນ',
                         text: 'ກະລຸນາເລືອກ ສະຖານະຫ້ອງ'
                     })
+                }else{
+                    $.get("getex1bytc.php",{
+                        room_no : no,
+                        romm_type : type,
+                        price : price,
+                        status : status
+                    },
+                function(output){
+                $('#show').html(output);
+                }
+                )
                 }
             });
 

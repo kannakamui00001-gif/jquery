@@ -22,28 +22,25 @@
                 var b = $("#type").val();
                 var c = $("#price").val();
                 var d = $("input[name='status']:checked").val();
-                if(!a ){
+                if (!a) {
                     alert('ກະລຸນາປ້ອນເລກຫ້ອງ');
-                }
-                else if(!b ){
+                } else if (!b) {
                     alert('ກະລຸນາເລືອກປະເພດຫ້ອງ');
-                }
-                else if(!c ){
+                } else if (!c) {
                     alert('ກະລຸນາເລືອກລາຄາຫ້ອງ');
-                }
-                else if(!d){
+                } else if (!d) {
                     alert('ຫ້ອງບໍ່ວ່າງ');
-                }else{
-                $.get("getex1.php", {
-                        roomnumber: a,
-                        type: b,
-                        price: c,
-                        status: d
-                    },
-                    function(output) {
-                        $("#show").html(output);
-                    }
-                );
+                } else {
+                    $.get("getex1.php", {
+                            roomnumber: a,
+                            type: b,
+                            price: c,
+                            status: d
+                        },
+                        function(output) {
+                            $("#show").html(output);
+                        }
+                    );
                 }
             });
             $('#reset').click(function(e) {
@@ -91,8 +88,8 @@
                             </div>
                             <div class=" mt-3">
                                 <label for="">ສະຖານະຫ້ອງ : </label>
-                                    <input type="radio" name="status" value="ວ່າງ"> ວ່າງ
-                                    <input type="radio" name="status" value="ບໍ່ວ່າງ"> ບໍ່ວ່າງ
+                                <input type="radio" name="status" value="ວ່າງ"> ວ່າງ
+                                <input type="radio" name="status" value="ບໍ່ວ່າງ"> ບໍ່ວ່າງ
                             </div>
                         </form>
                     </div>
@@ -105,7 +102,7 @@
             <div class=" col-md-4">
                 <div class=" card">
                     <div class=" card-header text-center bg-info text-white">
-                       <h2>ຜົນທີ່ໄດ້</h2>
+                        <h2>ຜົນທີ່ໄດ້</h2>
                     </div>
                     <div class=" card-body">
                         <div id="show"></div>
