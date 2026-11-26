@@ -61,10 +61,10 @@
 <body>
     <div class=" container-fluid py-5">
         <div class=" row">
-            <div class=" col-md-4"></div>
-            <div class=" col-md-4">
+            <div class=" col-md-3"></div>
+            <div class=" col-md-3">
                 <div class=" card">
-                    <div class=" card-header text-center text-white bg-success-subtle">
+                    <div class=" card-header text-center text-white bg-primary">
                         <h2 class=" text-center" align="center">ຟອມປ້ອນຂໍ້ມູນ</h2>
                     </div>
                     <div class=" card-body">
@@ -91,11 +91,9 @@
                                 </select>
                             </div>
                             <div class=" mt-3">
-                                <label for="">ສະຖານະຫ້ອງ</label>
-                                <div>
-                                    <input type="radio" name="status" value="ວ່າງ">ວ່າງ
-                                    <input type="radio" name="status" value="ບໍ່ວ່າງ">ບໍ່ວ່າງ
-                                </div>
+                                <label for="">ສະຖານະຫ້ອງ : </label>
+                                    <input type="radio" name="status" value="ວ່າງ"> ວ່າງ
+                                    <input type="radio" name="status" value="ບໍ່ວ່າງ"> ບໍ່ວ່າງ
                             </div>
                         </form>
                     </div>
@@ -105,9 +103,18 @@
                     </div>
                 </div>
             </div>
-            <div class=" col-md-4">
-                <div id="show"></div>
+            <div class=" col-md-3">
+                <div class=" card">
+                    <div class=" card-header text-center bg-info text-white">
+                       <h2>ຜົນທີ່ໄດ້</h2>
+                    </div>
+                    <div class=" card-body">
+                        <div id="show"></div>
+                    </div>
+                </div>
+                
             </div>
+            <div class=" col-md-3"></div>
         </div>
     </div>
 </body>
