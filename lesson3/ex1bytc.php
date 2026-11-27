@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./fontawesome-free-7.3.1-web/css/all.min.css">
     <style>
         * {
             font-family: phetsarath ot;
@@ -15,20 +15,21 @@
     </style>
 
     <script src="./java/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./java/alert.js"></script>
     <script>
         $(document).ready(function() {
             $('#send').click(function(e) {
                 e.preventDefault();
-                var on = $("#roomnumber").val();
+                var no = $("#roomnumber").val();
                 var type = $("#type").val();
                 var price = $("#price").val();
                 var status = $("input[name='status']:checked").val();
-                if (!on) {
+                if (!no) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'ແຈ້ງເຕືອນ',
-                        text: 'ກະລຸນາປ້ອນເບີຫ້ອງ'
+                        text: 'ກະລຸນາປ້ອນເບີຫ້ອງ',
+                        width : 300,
                     });
                 }
                 else if(!type){
@@ -54,14 +55,14 @@
                 }else{
                     $.get("getex1bytc.php",{
                         room_no : no,
-                        romm_type : type,
+                        room_type : type,
                         price : price,
                         status : status
                     },
                 function(output){
                 $('#show').html(output);
                 }
-                )
+                );
                 }
             });
 
@@ -108,8 +109,8 @@
                         </form>
                     </div>
                     <div class=" card-footer">
-                        <button type="button" class=" btn btn-success" id="send">ສົ່ງຂໍ້ມນ</button>
-                        <button type="button" class=" btn btn-success" id="reset">ລ້າງຂໍ້ມູນ</button>
+                        <button type="button" class=" btn btn-success" id="send"><i class=" fas fa-paper-plane"></i> ສົ່ງຂໍ້ມນ</button>
+                        <button type="button" class=" btn btn-success" id="reset"><i class=" fas fa-eraser"></i> ລ້າງຂໍ້ມູນ</button>
                     </div>
                 </div>
             </div>
