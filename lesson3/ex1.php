@@ -64,7 +64,7 @@
                         <h2 class=" text-center" align="center">ຟອມປ້ອນຂໍ້ມູນ</h2>
                     </div>
                     <div class=" card-body">
-                        <form action="./get.php" class=" vertical" method="get">
+                        <form action="./get.php" class=" vertical" method="get" >
                             <div class=" mt-3">
                                 <label for="">ເບີຫ້ອງ : </label>
                                 <input type="text" id="roomnumber" name="roomnumber" placeholder="ປ້ອນເລກຫ້ອງ" class=" form-control">
